@@ -1,0 +1,173 @@
+/* === Custom Font === */
+@font-face {
+  font-family: "comic";
+  src: url("../fonts/comic.ttf") format('truetype');
+}
+
+/* === Root Variables === */
+:root {
+  --background: #0a0a0a;
+  --card-bg: #1e1e1e;
+  --text: #00ffff;
+  --accent: #4f9cff;
+  --accent-hover: #357edd;
+  --input-bg: #2b2b2b;
+  --input-border: #444;
+  --error: #ff6b6b;
+  --icon-color: #086FFF;
+}
+
+/* === Base Body === */
+body {
+  font-family: "comic", Arial, sans-serif;
+  background: var(--background);
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 1rem;
+}
+
+/* === Container and Card === */
+.auth-container {
+  width: 100%;
+  max-width: 400px;
+  background: var(--card-bg);
+  padding: 2rem;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+}
+
+.auth-card {
+  width: 100%;
+}
+
+/* === Headings === */
+h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+
+/* === Input Fields === */
+input {
+  width: 100%;
+  padding: 0.6rem;
+  color: var(--text);
+  outline: none;
+  border: none;
+  background: var(--input-bg);
+  font-family: "comic";
+}
+
+input::placeholder {
+  color: #808080;
+}
+
+/* === Input Container === */
+.input-container {
+  border: 1px solid var(--input-border);
+  padding: 0 0.5rem;
+  display: flex;
+  align-items: center;
+  background: var(--input-bg);
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.input-container input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font: inherit;
+}
+
+.input-container.valid {
+  border-color: rgba(100, 150, 250, 0.5);
+}
+
+.input-container.invalid {
+  border-color: red;
+}
+
+.input-container.focus {
+  box-shadow: 0 0 5px gray;
+}
+
+.input-container.error-shake {
+  animation: shake 0.3s;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+/* === Links === */
+.link {
+  display: block;
+  text-align: center;
+  margin-top: 1rem;
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+.link:hover {
+  color: var(--accent-hover);
+}
+
+/* === Error and Label === */
+.error {
+  color: var(--error);
+  font-size: 0.8rem;
+  font-family: "comic";
+}
+
+label {
+  font-family: "comic";
+  font-size: 0.9rem;
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+/* === Icons === */
+.ph,
+.ph-bold,
+.ph-duotone,
+.ph-fill,
+.ph-light,
+.ph-thin {
+  cursor: pointer !important;
+  color: var(--icon-color);
+}
+
+/* === Responsive === */
+@media (min-width: 768px) {
+  .auth-container {
+    max-width: 480px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .auth-container {
+    max-width: 350px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .auth-container {
+    max-width: 400px;
+  }
+}

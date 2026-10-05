@@ -1,0 +1,77 @@
+.glass-card {
+	width: 100%;
+	height: auto;
+	margin: 0.5% auto;
+    /* Base glass layer - very subtle on pure black */
+    background: rgba(255, 255, 255, 0.05);
+    
+    /* Enhanced blur for depth */
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    
+    /* Precise border styling */
+    border: 1px solid rgba(255, 255, 255, 0.08);
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	display: flex;
+	flex-direction: row;
+	align-content: space-evenly;
+	align-items: center;
+	justify-content: space-evenly;
+	flex-shrink: 0;
+	flex-grow: 0;
+    
+    /* Sophisticated shadow system */
+    box-shadow: 
+        0 4px 30px rgba(0, 0, 0, 0.5),
+        inset 0 0 12px rgba(255, 255, 255, 0.03),
+        0 2px 4px rgba(0, 0, 0, 0.2);
+    
+    /* Content styling */
+    color: rgba(255, 255, 255, 0.85);
+    padding: 3%;
+    
+    /* Performance optimization */
+    transform: translateZ(0);
+    will-change: transform;
+}
+
+/* Hover state - subtle but noticeable */
+.glass-card:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.12);
+    box-shadow: 
+        0 8px 40px rgba(0, 0, 0, 0.6),
+        inset 0 0 16px rgba(255, 255, 255, 0.05);
+}
+
+/* Accent color variations */
+.glass-card.blue-accent {
+    background: rgba(70, 130, 180, 0.08); /* Steel blue */
+    border-color: rgba(70, 130, 180, 0.15);
+}
+
+.glass-card.green-accent {
+    background: rgba(46, 139, 87, 0.08); /* Sea green */
+    border-color: rgba(46, 139, 87, 0.15);
+}
+
+/* For dynamic content */
+.glass-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.1) 0%,
+        rgba(255, 255, 255, 0) 50%
+    );
+    mix-blend-mode: overlay;
+}

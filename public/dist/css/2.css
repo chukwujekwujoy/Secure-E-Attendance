@@ -1,0 +1,237 @@
+/*  */
+
+.sb-body {
+	width: 100%;
+	height: auto;
+	margin: 2% auto;
+	padding: 0 0 2% 1%;
+	display: flex;
+	flex-shrink: 1;
+	flex-grow: 0;
+	flex-direction: column;
+	align-content: space-evenly;
+	align-items: center;
+	justify-content: space-evenly;
+	box-sizing: border-box;
+	overflow-y: auto;
+}
+.sb-info-body {
+	width: 100%;
+	height: auto;
+	margin: 2% auto;
+	padding: 0 0 2% 1%;
+	display: flex;
+	flex-shrink: 1;
+	flex-grow: 0;
+	flex-direction: row;
+	align-content: center;
+	align-items: flex-start;
+	justify-content: space-between;
+	box-sizing: border-box;
+	
+}
+.sb-tabs {
+	width: 100%;
+	height: auto;
+	padding: 1% 2%;
+	margin: 0.5% auto;
+	display: flex;
+	flex-direction: row;
+	align-content: space-evenly;
+	align-items: center;
+	justify-content: space-evenly;
+	flex-shrink: 0;
+	flex-grow: 0;
+	border-top: 2px solid black;
+	border-bottom: 2px solid black;
+	font-size: 1rem;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	
+}
+.sb-tabs > div:nth-child(1) {
+	width: 10%;
+	min-width: 10%;
+	max-width: 10%;
+	height: auto;
+	margin-right: 2%;
+	
+	
+}
+.sb-tabs > div:nth-child(2) {
+	width: 30%;
+	min-width: 30%;
+	max-width: 45%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	align-content: space-evenly;
+	align-items: flex-start;
+	justify-content: space-evenly;
+	flex-grow: 1;
+	flex-shrink: 1;
+	
+	
+}
+.sb-tabs > div:nth-child(3) {
+	width: 30%;
+	min-width: 30%;
+	max-width: 50%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	align-content: space-evenly;
+	align-items: flex-end;
+	justify-content: space-evenly;
+	flex-grow: 1;
+	flex-shrink: 1;
+	
+	
+}
+. sb-tabs-equal {
+	width: 50%;
+	max-width: 50%;
+	height: auto;
+	display: flex;
+	flex-direction: row;
+	align-content: space-evenly;
+	align-items: flex-end;
+	justify-content: space-evenly;
+	
+	
+}
+.sb-tabs-equal > div:nth-child(1) {
+	max-width: 100%;
+	height: auto;
+	
+	
+}
+.sb-tabs-equal > div:nth-child(2) {
+	max-width: 100%;
+	height: auto;
+	
+	
+}
+.sb-tabs-equal > div:nth-child(3) {
+	max-width: 100%;
+	height: auto;
+	
+	
+}
+
+.address-input {
+	display: flex;
+	align-items: center;
+	flex-grow: 1;
+	background: transparent;
+	border: 1px solid #444;
+	padding: 0.6% 2%;
+	transition: border 0.3s ease, box-shadow 0.3s ease;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 15px;
+	border-bottom-left-radius: 15px;
+}
+.address-input input {
+	width: 100%;
+	padding: 0.5rem;
+	flex: 1;
+	background: transparent;
+	border: none;
+	font-size: 1.1rem;
+	color: #e2e8f0;
+	outline: none;
+}
+.address-input input::placeholder {
+	color: #475569;
+	font-size: 1.2rem;
+	font-style: italic;
+}
+.address-input i {
+	cursor: pointer;
+	border-radius: 50%;
+	padding: 4px;
+	
+}
+.address-input i:hover {
+	background-color: #475569;
+}
+.value-input {
+	display: flex;
+	align-items: center;
+	flex-grow: 1;
+	background: transparent;
+	border: 1px solid #444;
+	padding: 0.6% 2%;
+	transition: border 0.3s ease, box-shadow 0.3s ease;
+	
+	border-top-left-radius: 15px;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 15px;
+	border-bottom-left-radius: 15px;
+}
+
+input[title*="transactAmount"] {
+	width: 100%;
+	padding: 0.5rem;
+	flex: 1;
+	background: transparent;
+	border: none;
+	font-size: 5em;
+	color: #e2e8f0;
+	outline: none;
+	text-align: center;
+	-moz-appearance: textfield;
+}
+input[title*="transactAmount"]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+input[title*="transactAmount"]::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+.addressError {
+	color: red;
+	font-size: 0.8rem;
+	
+}
+.wallet-option, .network-option {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 12px;
+	background: rgba(255, 255, 255, 0.03);
+	border-radius: 8px;
+	margin-top: 8px;
+	cursor: pointer;
+	transition: background 0.3s;
+}
+.wallet-option:hover, .network-option:hover {
+	background: rgba(255, 255, 255, 0.08);
+}
+.wallet-details, .network-details {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+.wallet-icon, .network-icon {
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+}
+. {}
+. {}
+. {}
+. {}
+. {}
+. {}
+. {}

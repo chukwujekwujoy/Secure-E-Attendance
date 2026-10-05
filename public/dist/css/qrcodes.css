@@ -1,0 +1,160 @@
+/* QR-Code.css */
+
+
+.subtitle {
+	font-size: 1.2rem;
+	opacity: 0.9;
+}
+.section {
+	background: rgba(0, 0, 0, 0.4);
+	border-radius: 15px;
+	padding: 25px;
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+	margin-bottom: 30px;
+}
+.section-title {
+	font-size: 1.8rem;
+	margin-bottom: 20px;
+	text-align: center;
+	color: #fdbb2d;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+#camera-select {
+	width: 100%;
+	padding: 12px;
+	border: none;
+	border-radius: 8px;
+	font-size: 1rem;
+	background: rgba(255, 255, 255, 0.9);
+	color: #333;
+}
+#rescan-btn {
+	background: #fdbb2d;
+	width: 100%;
+	color: #1a2a6c;
+	font-weight: bold;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	margin-top: 10px;
+	padding: 12px;
+	border: none;
+	border-radius: 8px;
+	font-size: 1rem;
+}
+#rescan-btn:disabled {
+	background: #cccccc;
+	cursor: not-allowed;
+	transform: none;
+	box-shadow: none;
+}
+
+.camera-permission {
+	margin-top: 15px;
+	padding: 10px;
+	background: rgba(255, 193, 7, 0.2);
+	border-radius: 8px;
+	text-align: center;
+}
+#scanner-container {
+	position: relative;
+	width: 100%;
+	padding: 3%;
+	margin: 0 auto;
+	overflow: hidden;
+}
+#video {
+	width: 100%;
+	border-radius: 10px;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+	background: #333;
+	min-height: 300px;
+	margin: 0 auto;
+}
+.scan-result {
+	margin-top: 20px;
+	padding: 15px;
+	background: rgba(255, 255, 255, 0.1);
+	border-radius: 10px;
+	min-height: 80px;
+	word-break: break-all;
+}
+.instructions {
+	margin-top: 25px;
+	padding: 15px;
+	background: rgba(0, 0, 0, 0.3);
+	border-radius: 10px;
+	font-size: 0.9rem;
+	line-height: 1.6;
+}
+.instructions h3 {
+	margin-bottom: 10px;
+	color: #fdbb2d;
+}
+.instructions ul {
+	padding-left: 20px;
+}
+.instructions li {
+	margin-bottom: 8px;
+}
+.loading {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	border: 3px solid rgba(255,255,255,.3);
+	border-radius: 50%;
+	border-top-color: #fff;
+	animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.scanning-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	border: 2px solid #fdbb2d;
+	border-radius: 10px;
+	box-shadow: 0 0 20px rgba(253, 187, 45, 0.5);
+}
+.scanner-frame {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 70%;
+	height: 70%;
+	border: 2px solid #fdbb2d;
+	box-shadow: 0 0 0 4000px rgba(0, 0, 0, 0.3);
+	border-radius: 10px;
+}
+.scanning-line {
+	position: absolute;
+	height: 2px;
+	width: 100%;
+	background: #fdbb2d;
+	animation: scan 2s infinite linear;
+}
+
+@keyframes scan {
+	0% {
+		top: 20%;
+	}
+	50% {
+		top: 80%;
+	}
+	100% {
+		top: 20%;
+	}
+	
+}
+
+
+
+

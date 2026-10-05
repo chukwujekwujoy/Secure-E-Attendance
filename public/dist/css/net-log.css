@@ -1,0 +1,41 @@
+.network_messages {
+	font-family: monospace;
+	height: 250px;
+	overflow-y: auto;
+	padding: 10px;
+	background: #111;
+	color: #0f0;
+}
+
+.network_messages .line {
+	white-space: pre-wrap;   /* keeps line breaks, wraps long text */
+	word-break: break-word;
+}
+
+.network_messages .prefix {
+	display: inline-block;
+	margin-right: 0.6em;
+	color: #8a8a8a;
+}
+.network_messages .line.success .prefix { color: #22c55e; }
+.network_messages .line.error .prefix   { color: #ef4444; }
+.network_messages .line.error {
+	color: #fca5a5;
+}
+
+.cursor {
+	display: inline-block;
+	width: 0.6em;
+	height: 1em;
+	vertical-align: text-bottom;
+	background: currentColor;
+	animation: blink 0.8s step-end infinite;
+}
+
+@keyframes blink {
+	50% { opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.cursor { animation: none; }
+}
