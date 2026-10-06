@@ -34,14 +34,14 @@ define('RP_ORIGIN', $scheme . '://' . $_SERVER['HTTP_HOST']);
 define('CHALLENGE_TTL', 300);
 
 // Database connection (PDO / MySQL). No ORM, no external libs.
-define('DB_SERVER', 'localhost');
-define('DB_USERNAME', 'root');
-define('DB_PASSWORD', 'Mmesomachukwu234');
-define('DB_NAME', 'futo_eattendance');
+define('DB_SERVER', );
+define('DB_USERNAME',);
+define('DB_PASSWORD', );
+define('DB_NAME', );
 
 /* Attempt to connect to MySQL database using PDO method */
 try{
-    $pdo = new PDO("mysql:host=" . DB_SERVER . ";dbname=" . DB_NAME, DB_USERNAME, DB_PASSWORD);
+   $pdo = new PDO("mysql:host=" . DB_SERVER . ";port=" . DB_PORT . ";dbname=" . DB_NAME, DB_USERNAME, DB_PASSWORD);
     /* Set the PDO error mode to exception */
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch(PDOException $e){
