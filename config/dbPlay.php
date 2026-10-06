@@ -11,6 +11,7 @@ define('DB_NAME', getenv('DB_NAME') ?: 'futo_attendance_savetower');
 
 /* Attempt to connect to MySQL database using PDO method */
 try {
+   error_log("Connecting to: " . DB_SERVER . " as " . DB_USERNAME);
     $pdo = new PDO("mysql:host=" . DB_SERVER . ";port=" . DB_PORT . ";dbname=" . DB_NAME, DB_USERNAME, DB_PASSWORD);
     /* Set the PDO error mode to exception */
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
