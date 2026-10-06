@@ -34,11 +34,11 @@ define('RP_ORIGIN', $scheme . '://' . $_SERVER['HTTP_HOST']);
 define('CHALLENGE_TTL', 300);
 
 // Database connection (PDO / MySQL). No ORM, no external libs.
-define('DB_SERVER', );
-define('DB_PORT', );
-define('DB_USERNAME',);
-define('DB_PASSWORD', );
-define('DB_NAME', );
+define('DB_SERVER', getenv('DB_HOST') ?: 'amwhdi.h.filess.io');
+define('DB_PORT', getenv('DB_PORT') ?: '3307');
+define('DB_USERNAME', getenv('DB_USER') ?: 'futo_attendance_savetower');
+define('DB_PASSWORD', getenv('DB_PASS') ?: '');
+define('DB_NAME', getenv('DB_NAME') ?: 'futo_attendance_savetower');
 
 /* Attempt to connect to MySQL database using PDO method */
 try{
