@@ -1,13 +1,13 @@
 <?php
 
 /* mail head */
-require_once __DIR__ . '../../config/mailhead.php';
+require_once __DIR__ . '/../../config/mailhead.php';
 /* Database file */
-require_once __DIR__ . '../../config/dbPlay.php';
+require_once __DIR__ . '/../../config/dbPlay.php';
 /* tokens generator */
-require_once __DIR__ . '../../config/cdecs.php';
+require_once __DIR__ . '/../../config/cdecs.php';
 /* Dynamic domain script */
-require_once __DIR__ . '../../config/domain-host.php';
+require_once __DIR__ . '/../../config/domain-host.php';
 
 
 /* Input placeholders */
