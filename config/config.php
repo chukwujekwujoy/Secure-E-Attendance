@@ -35,6 +35,7 @@ define('CHALLENGE_TTL', 300);
 
 // Database connection (PDO / MySQL). No ORM, no external libs.
 define('DB_SERVER', );
+define('DB_PORT', );
 define('DB_USERNAME',);
 define('DB_PASSWORD', );
 define('DB_NAME', );
